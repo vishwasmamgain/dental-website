@@ -1,3 +1,23 @@
+/* Sticky Mobile Bar */
+.mobile-sticky-bar {
+    display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));
+    z-index:35;gap:8px;padding:10px;
+    background:rgba(250,247,240,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 12px 32px rgba(13,26,31,.14);
+}
+.mobile-sticky-bar .btn {
+    flex:1;min-height:44px;padding:0 12px;font-size:13px;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    font-weight:700;border-radius:8px;text-decoration:none;
+}
+.mobile-sticky-bar .btn-call { background:var(--primary); color:#fff; }
+.mobile-sticky-bar .btn-whatsapp { background:var(--accent); color:#fff; }
+
+@media(max-width:900px){
+    .mobile-sticky-bar {display:grid;grid-template-columns:1fr 1fr}
+}
+
 :root {
   --primary: #1a2e35;
   --primary-dark: #0d1a1f;
